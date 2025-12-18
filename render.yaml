@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: task-management-api
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn task_api_project.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: task_api_project.settings
+      - key: PYTHON_VERSION
+        value: 3.11.0
