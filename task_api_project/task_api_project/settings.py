@@ -14,8 +14,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY SETTINGS
 # ---------------------------------------
 SECRET_KEY = 'django-insecure-replace-this-with-a-real-secret-key'
-DEBUG = True
-ALLOWED_HOSTS = ['*']  # Allow localhost, PythonAnywhere, etc.
+DEBUG = False
+ALLOWED_HOSTS = ["*", ".onrender.com"]
+
 
 # ---------------------------------------
 # INSTALLED APPS
@@ -34,7 +35,9 @@ INSTALLED_APPS = [
 
     # Local apps
     'tasks',
-]
+    'accounts',
+
+    ]
 
 # ---------------------------------------
 # MIDDLEWARE
